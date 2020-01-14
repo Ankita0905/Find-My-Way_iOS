@@ -299,14 +299,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 439A5LJCX9;
+				DEVELOPMENT_TEAM = 4D8V5RZBKQ;
 				INFOPLIST_FILE = "Find My Way/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mohammadkiani.Find-My-Way";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find My Way";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,14 +317,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 439A5LJCX9;
+				DEVELOPMENT_TEAM = 4D8V5RZBKQ;
 				INFOPLIST_FILE = "Find My Way/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mohammadkiani.Find-My-Way";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find My Way";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  exercise2_iOS
+//  Find My Way
 //
 //  Created by Ankita Jain on 2020-01-10.
 //  Copyright © 2020 Ankita Jain. All rights reserved.
@@ -76,24 +76,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print(distance)
             if self.distance.count == 3{
                 print(self.distance[0])
-                let label1: UILabel = UILabel(frame: CGRect(x: ((self.screen[0].x + self.screen[1].x - 80)/2), y: ((self.screen[0].y + self.screen[1].y)/2), width: 120, height: 30))
-                label1.text = "\(self.distance[0]) m"
-                self.mapView.addSubview(label1)
-                let label2: UILabel = UILabel(frame: CGRect(x: ((self.screen[1].x + self.screen[2].x - 80)/2), y: ((self.screen[1].y + self.screen[2].y)/2), width: 120, height: 30))
+                let d1: UILabel = UILabel(frame: CGRect(x: ((self.screen[0].x + self.screen[1].x - 80)/2), y: ((self.screen[0].y + self.screen[1].y)/2), width: 120, height: 30))
+                d1.text = "\(self.distance[0]) m"
+                self.mapView.addSubview(d1)
+                let d2: UILabel = UILabel(frame: CGRect(x: ((self.screen[1].x + self.screen[2].x - 80)/2), y: ((self.screen[1].y + self.screen[2].y)/2), width: 120, height: 30))
 
-                label2.text = "\(self.distance[1]) m"
-                    self.mapView.addSubview(label2)
-                    let label3: UILabel = UILabel(frame: CGRect(x: ((self.screen[2].x + self.screen[0].x - 80)/2), y: ((self.screen[2].y + self.screen[0].y)/2), width: 120, height: 30))
+                d2.text = "\(self.distance[1]) m"
+                    self.mapView.addSubview(d2)
+                    
+                let d3: UILabel = UILabel(frame: CGRect(x: ((self.screen[2].x + self.screen[0].x - 80)/2), y: ((self.screen[2].y + self.screen[0].y)/2), width: 120, height: 30))
 
-                label3.text = "\(self.distance[2]) m"
+                d3.text = "\(self.distance[2]) m"
 
-                self.mapView.addSubview(label3)
+                self.mapView.addSubview(d3)
             }
             self.mapView.addOverlay(route.polyline, level: .aboveRoads)
             self.mapView.addOverlay(route.polyline, level: .aboveRoads)
-//            let rect = route.polyline.boundingMapRect
-//            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-            
+
         }
         
     }
@@ -146,18 +145,14 @@ extension ViewController : UIGestureRecognizerDelegate, MKMapViewDelegate {
             self.mapView.addOverlay(routeLine3)
             self.mapView.addOverlay(show)
             }
-        else{
-        
+        else if (pin==4){
+        deletePin()
+        }
+        else {
+            
         }
     
         desireCoordinate = coordinate
-        
-    }
-
-    func removePin() {
-     for annotation in mapView.annotations {
-        mapView.removeAnnotation(annotation)
-            }
         
     }
     
@@ -171,4 +166,10 @@ extension ViewController : UIGestureRecognizerDelegate, MKMapViewDelegate {
         
     }
     
+        func deletePin() {
+         for annotation in mapView.annotations {
+            mapView.removeAnnotation(annotation)
+                }
+    
+        }
 }
